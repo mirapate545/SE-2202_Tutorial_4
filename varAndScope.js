@@ -8,16 +8,17 @@
 */
 
 // Global scope
-var message; //set to the correct string
+var message = 'hello world!'; //set to the correct string
 
 function greetingFunction(saySomethingElse) {
-  // Function scope
-  var message; //set to the correct string
+  
+    // Function scope
+  var message = 'hi'; //set to the correct string
   console.log(message); 
 
   if (saySomethingElse) {
     // Block scope
-    let message; //set to a string
+    let message = 'hello!'; //set to a string
     console.log(message); 
   }
 }
@@ -28,7 +29,7 @@ greetingFunction(true); //Should return "hi!" and "hello!" on separate lines
 console.log(message); //Should return "hello world!"
 
 if (true) {
-    var message; //set to a string
+    var message = 'goodbye!'; //set to a string
 }
 
 //DO NOT change this line
